@@ -15,11 +15,17 @@
 class Game {
     private:
         Deck gameDeck;
-   
+        Card hand[5];
     public:
+        Game();                     // constructor to initialize game
+        void drawHand();            // draws hand of five cards
+        bool hasFlush();             //
+        bool hasPair();
+        void startGame();
     
     
-    
+};
 
-}
+
+
 #endif /* game_h */

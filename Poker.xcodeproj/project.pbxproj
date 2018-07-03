@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D21DE96820EB262000040247 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D21DE96620EB262000040247 /* main.cpp */; };
+		D21DE96B20EB38E500040247 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D21DE96920EB38E500040247 /* main.cpp */; };
 		D252BE3920EAE687002320E1 /* game1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D252BE3820EAE687002320E1 /* game1.cpp */; };
 		D252BE4320EAE72F002320E1 /* card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D252BE3F20EAE72F002320E1 /* card.cpp */; };
 		D252BE4420EAE72F002320E1 /* deck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D252BE4120EAE72F002320E1 /* deck.cpp */; };
@@ -26,8 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D21DE96620EB262000040247 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		D21DE96720EB262000040247 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		D21DE96920EB38E500040247 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D21DE96A20EB38E500040247 /* main.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
 		D252BE3520EAE687002320E1 /* Poker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Poker; sourceTree = BUILT_PRODUCTS_DIR; };
 		D252BE3820EAE687002320E1 /* game1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game1.cpp; sourceTree = "<group>"; };
 		D252BE3F20EAE72F002320E1 /* card.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = card.cpp; path = "../../../1 - Poker Lab Data Files/card.cpp"; sourceTree = "<group>"; };
@@ -68,8 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				D252BE3820EAE687002320E1 /* game1.cpp */,
-				D21DE96620EB262000040247 /* main.cpp */,
-				D21DE96720EB262000040247 /* main.h */,
+				D21DE96920EB38E500040247 /* main.cpp */,
+				D21DE96A20EB38E500040247 /* main.hpp */,
 				D252BE4520EAE744002320E1 /* game1.h */,
 				D252BE3F20EAE72F002320E1 /* card.cpp */,
 				D252BE4220EAE72F002320E1 /* card.h */,
@@ -138,7 +138,7 @@
 			files = (
 				D252BE3920EAE687002320E1 /* game1.cpp in Sources */,
 				D252BE4320EAE72F002320E1 /* card.cpp in Sources */,
-				D21DE96820EB262000040247 /* main.cpp in Sources */,
+				D21DE96B20EB38E500040247 /* main.cpp in Sources */,
 				D252BE4420EAE72F002320E1 /* deck.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

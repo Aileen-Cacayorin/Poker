@@ -14,23 +14,36 @@
 
 using namespace std;
 
+Game::Game() {
+    gameDeck = Deck();
+    Card hand[5];
+    gameDeck.shuffle(100);
+};
+
+void Game::drawHand() {
+    for (int i = 0; i < 5; i++) {
+        hand[i] = gameDeck.getCard();
+        hand[i].printCard();
+        cout << endl;
+    }
+    
+};
 
 
-
-bool isFlush(Card a[5]) {
+bool Game::hasFlush() {
     
     for (int i = 1; i < 5; i++) {
-        if (a[i].getSuit() != a[0].getSuit())
+        if (hand[i].getSuit() != hand[0].getSuit())
             return 0;
     };
     return 1;
     
 };
 
-bool isPair(Card a[5]) {
+bool Game::hasPair() {
     for (int i = 0; i < 4; i++) {
         for (int j = (i+1); j < 5; j++) {
-            if (a[i].getValue() == a[j].getValue()) {
+            if (hand[i].getValue() == hand[j].getValue()) {
                 return 1;
             }
         }
@@ -39,28 +52,10 @@ bool isPair(Card a[5]) {
     
 };
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    
-    srand((unsigned)time(NULL));
-    
-    Deck gameDeck;
-    Card hand[5];
-    gameDeck.shuffle(rand() % 1000);
-    
-    for (int i = 0; i < 5; i++) {
-        hand[i] = gameDeck.getCard();
-        hand[i].printCard();
-        cout << endl;
-    }
 
-    
-    cout << isFlush(hand) << endl;
-    cout << isPair(hand) << endl;
-    cout << gameDeck.totalCards() << endl;
-   
-    return 0;
-}
+
+
+
 
 
 

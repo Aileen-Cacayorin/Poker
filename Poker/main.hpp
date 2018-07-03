@@ -6,9 +6,10 @@
 //  Copyright © 2018 com.aileenbull. All rights reserved.
 //
 
-#ifndef main_h
-#define main_h
+#ifndef main_hpp
+#define main_hpp
 
 #include <stdio.h>
+#include "game1.h"
 
-#endif /* main_h */
+#endif /* main_hpp */
