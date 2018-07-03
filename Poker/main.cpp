@@ -24,18 +24,24 @@ int main(int argc, const char * argv[]) {
     srand((unsigned)time(NULL));
     
     int trials = 10;
-    cout << "Trial #\t # of Hands\t Flushes\t Pairs\t Flush %\t Pair %\t" <<endl;
+    cout << fixed << setprecision(2);
+    cout << "Trial  ";
+    cout << "# of Hands ";
+    cout << "# of Flushes   ";
+    cout << "# of Pairs     ";
+    cout << "Flush %     ";
+    cout << "Pair % " <<endl;
     for (int i=0; i < trials; i++) {
     
         Game poker(10000);
         for (int i=0; i<poker.totalHands; i++) {
             poker.playHand();
         }
-        cout << fixed << setprecision(2);
-        cout << "\t" << i+1 <<"\t\t"<< poker.totalHands << "\t\t" << poker.getTotalFlushes() << "\t\t" << poker.getTotalPairs() <<"\t\t" <<  poker.calculateFlushPercentage() << "%\t\t" <<  poker.calculatePairPercentage() << "%" << endl;
+        
+        cout << "\t" << i+1 <<"\t\t"<< poker.totalHands << "\t\t" << poker.getTotalFlushes() << "\t\t\t" << poker.getTotalPairs() <<"\t\t" <<  poker.calculateFlushPercentage() << "%\t\t" <<  poker.calculatePairPercentage() << "%" << endl;
         
     }
-    
+
    
    
     
