@@ -23,20 +23,16 @@ Game::Game() {
 void Game::dealCards() {
     for (int i = 0; i < 5; i++) {
         hand[i] = gameDeck.getCard();
-        hand[i].printCard();
-        cout << endl;
-    }    
+    }
 };
 
 
 bool Game::hasFlush() {
-    
     for (int i = 1; i < 5; i++) {
         if (hand[i].getSuit() != hand[0].getSuit())
             return 0;
     };
     return 1;
-    
 };
 
 bool Game::hasPair() {
@@ -48,7 +44,6 @@ bool Game::hasPair() {
         }
     };
     return 0;
-    
 };
 
 void Game::putCardsBack() {

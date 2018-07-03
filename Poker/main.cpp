@@ -21,14 +21,20 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     
     srand((unsigned)time(NULL));
+    int totalFlushes = 0;
+    int totalPairs = 0;
     Game poker;
-    for (int i=0; i<100; i++) {
+    for (int i=0; i<1000; i++) {
        
         poker.dealCards();
-        cout << poker.hasFlush() << endl;
-        cout << poker.hasPair() << endl;
+        if (poker.hasFlush())
+            totalFlushes +=1;
+        if (poker.hasPair())
+            totalPairs += 1;
         poker.putCardsBack();
-        cout << endl;
+    
     }
+    cout << totalFlushes << endl;
+    cout << totalPairs << endl;
     return 0;
 };
