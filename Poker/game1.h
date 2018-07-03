@@ -12,5 +12,14 @@
 #include "card.h"
 #include "deck.h"
 
+class Game {
+    private:
+        Deck gameDeck;
+   
+    public:
+    
+    
+    
 
+}
 #endif /* game_h */
