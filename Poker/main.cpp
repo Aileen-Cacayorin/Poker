@@ -21,20 +21,16 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     
     srand((unsigned)time(NULL));
-    int totalFlushes = 0;
-    int totalPairs = 0;
-    Game poker;
-    for (int i=0; i<1000; i++) {
-       
-        poker.dealCards();
-        if (poker.hasFlush())
-            totalFlushes +=1;
-        if (poker.hasPair())
-            totalPairs += 1;
-        poker.putCardsBack();
-    
+    Game poker(1000);
+    for (int i=0; i<poker.totalHands; i++) {
+        poker.playHand();
     }
-    cout << totalFlushes << endl;
-    cout << totalPairs << endl;
+    cout << poker.getTotalFlushes() << endl;
+    cout << poker.getTotalPairs() << endl;
+    
+    cout << poker.calculateFlushPercentage() << endl;
+    cout << poker.calculatePairPercentage() << endl;
+
+    
     return 0;
 };

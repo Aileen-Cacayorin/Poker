@@ -16,13 +16,22 @@ class Game {
     private:
         Deck gameDeck;
         Card hand[5];
+        int  totalFlushes;
+        int  totalPairs;
+    
     public:
+        int totalHands;
         Game();                     // constructor to initialize game
-        void dealCards();            // draws hand of five cards
-        bool hasFlush();             //
-        bool hasPair();
-        void startGame();
-        void putCardsBack();
+        Game(int hands);            // iniatializes with total hands to draw in a game
+        void dealCards();           // draws hand of five cards
+        bool hasFlush();            // checks if a hand has a flush
+        bool hasPair();             // checks if a hand has a pair
+        void putCardsBack();        // returns all cards in a hand to deck
+        void playHand();            // shuffles deck, deals a hand, puts cards back in deck
+        int getTotalFlushes();      // returns total number of flushes in a game
+        int getTotalPairs();        // returns total number of pairs in a game
+        double calculateFlushPercentage(); //returns percentage of flushes in a game
+        double calculatePairPercentage();       // returns percentage of pairs in a game
     
     
     

@@ -17,15 +17,25 @@ using namespace std;
 Game::Game() {
     gameDeck = Deck();
     Card hand[5];
-    gameDeck.shuffle(100);
+    totalHands = 1;
+    totalFlushes = 0;
+    totalPairs = 0;
+};
+
+Game::Game(int hands) {
+    gameDeck = Deck();
+    Card hand[5];
+    totalHands = hands;
+    totalFlushes = 0;
+    totalPairs = 0;
 };
 
 void Game::dealCards() {
+    gameDeck.shuffle(100);
     for (int i = 0; i < 5; i++) {
         hand[i] = gameDeck.getCard();
     }
 };
-
 
 bool Game::hasFlush() {
     for (int i = 1; i < 5; i++) {
@@ -50,12 +60,32 @@ void Game::putCardsBack() {
     for (int i = 0; i < 5; i++) {
         gameDeck.addCard(hand[i]);
     };
-    gameDeck.shuffle(100);
 };
 
+void Game::playHand() {
+    dealCards();
+    if (hasFlush())
+        totalFlushes +=1;
+    if (hasPair())
+        totalPairs += 1;
+    putCardsBack();
+};
 
+int Game::getTotalFlushes() {
+    return totalFlushes;
+    
+};
+int Game::getTotalPairs() {
+    return totalPairs;
+};
 
+double Game::calculateFlushPercentage() {
+    return (static_cast <double>(totalFlushes)/ totalHands)*100;
+};
 
+double Game::calculatePairPercentage() {
+    return (static_cast <double>(totalPairs)/ totalHands)*100;
+};
 
 
 
