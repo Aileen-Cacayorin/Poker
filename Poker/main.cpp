@@ -22,16 +22,22 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     
     srand((unsigned)time(NULL));
-    Game poker(1000);
-    for (int i=0; i<poker.totalHands; i++) {
-        poker.playHand();
+    
+    int trials = 10;
+    cout << "Trial #\t # of Hands\t Flushes\t Pairs\t Flush %\t Pair %\t" <<endl;
+    for (int i=0; i < trials; i++) {
+    
+        Game poker(10000);
+        for (int i=0; i<poker.totalHands; i++) {
+            poker.playHand();
+        }
+        cout << fixed << setprecision(2);
+        cout << "\t" << i+1 <<"\t\t"<< poker.totalHands << "\t\t" << poker.getTotalFlushes() << "\t\t" << poker.getTotalPairs() <<"\t\t" <<  poker.calculateFlushPercentage() << "%\t\t" <<  poker.calculatePairPercentage() << "%" << endl;
+        
     }
-    cout << poker.getTotalFlushes() << endl;
-    cout << poker.getTotalPairs() << endl;
-    cout << fixed << setprecision(2);
-    cout << poker.calculateFlushPercentage() << endl;
-    cout << poker.calculatePairPercentage() << endl;
-
+    
+   
+   
     
     return 0;
 };
