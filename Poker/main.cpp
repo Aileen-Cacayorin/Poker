@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
+#include <iomanip>
 
 
 
@@ -27,7 +28,7 @@ int main(int argc, const char * argv[]) {
     }
     cout << poker.getTotalFlushes() << endl;
     cout << poker.getTotalPairs() << endl;
-    
+    cout << fixed << setprecision(2);
     cout << poker.calculateFlushPercentage() << endl;
     cout << poker.calculatePairPercentage() << endl;
 
