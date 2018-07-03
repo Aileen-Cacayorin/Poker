@@ -18,10 +18,12 @@ class Game {
         Card hand[5];
     public:
         Game();                     // constructor to initialize game
-        void drawHand();            // draws hand of five cards
+        void dealCards();            // draws hand of five cards
         bool hasFlush();             //
         bool hasPair();
         void startGame();
+        void putCardsBack();
+    
     
     
 };

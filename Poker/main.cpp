@@ -14,21 +14,21 @@
 #include <iostream>
 
 
+
 using namespace std;
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     
     srand((unsigned)time(NULL));
-    
-    for (int i=0; i<10; i++) {
-        Game poker;
-        poker.drawHand();
-        
-        
+    Game poker;
+    for (int i=0; i<100; i++) {
+       
+        poker.dealCards();
         cout << poker.hasFlush() << endl;
         cout << poker.hasPair() << endl;
+        poker.putCardsBack();
+        cout << endl;
     }
-    cout << "This change will be committed";
     return 0;
 };

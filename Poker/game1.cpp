@@ -20,13 +20,12 @@ Game::Game() {
     gameDeck.shuffle(100);
 };
 
-void Game::drawHand() {
+void Game::dealCards() {
     for (int i = 0; i < 5; i++) {
         hand[i] = gameDeck.getCard();
         hand[i].printCard();
         cout << endl;
-    }
-    
+    }    
 };
 
 
@@ -50,6 +49,13 @@ bool Game::hasPair() {
     };
     return 0;
     
+};
+
+void Game::putCardsBack() {
+    for (int i = 0; i < 5; i++) {
+        gameDeck.addCard(hand[i]);
+    };
+    gameDeck.shuffle(100);
 };
 
 
