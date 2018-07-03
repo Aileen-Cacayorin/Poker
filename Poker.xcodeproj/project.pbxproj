@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D252BE3920EAE687002320E1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D252BE3820EAE687002320E1 /* main.cpp */; };
+		D252BE3920EAE687002320E1 /* game1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D252BE3820EAE687002320E1 /* game1.cpp */; };
+		D252BE4320EAE72F002320E1 /* card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D252BE3F20EAE72F002320E1 /* card.cpp */; };
+		D252BE4420EAE72F002320E1 /* deck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D252BE4120EAE72F002320E1 /* deck.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +26,12 @@
 
 /* Begin PBXFileReference section */
 		D252BE3520EAE687002320E1 /* Poker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Poker; sourceTree = BUILT_PRODUCTS_DIR; };
-		D252BE3820EAE687002320E1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D252BE3820EAE687002320E1 /* game1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game1.cpp; sourceTree = "<group>"; };
+		D252BE3F20EAE72F002320E1 /* card.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = card.cpp; path = "../../../1 - Poker Lab Data Files/card.cpp"; sourceTree = "<group>"; };
+		D252BE4020EAE72F002320E1 /* deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = deck.h; path = "../../../1 - Poker Lab Data Files/deck.h"; sourceTree = "<group>"; };
+		D252BE4120EAE72F002320E1 /* deck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = deck.cpp; path = "../../../1 - Poker Lab Data Files/deck.cpp"; sourceTree = "<group>"; };
+		D252BE4220EAE72F002320E1 /* card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = card.h; path = "../../../1 - Poker Lab Data Files/card.h"; sourceTree = "<group>"; };
+		D252BE4520EAE744002320E1 /* game1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = game1.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +64,12 @@
 		D252BE3720EAE687002320E1 /* Poker */ = {
 			isa = PBXGroup;
 			children = (
-				D252BE3820EAE687002320E1 /* main.cpp */,
+				D252BE3820EAE687002320E1 /* game1.cpp */,
+				D252BE4520EAE744002320E1 /* game1.h */,
+				D252BE3F20EAE72F002320E1 /* card.cpp */,
+				D252BE4220EAE72F002320E1 /* card.h */,
+				D252BE4120EAE72F002320E1 /* deck.cpp */,
+				D252BE4020EAE72F002320E1 /* deck.h */,
 			);
 			path = Poker;
 			sourceTree = "<group>";
@@ -119,7 +131,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D252BE3920EAE687002320E1 /* main.cpp in Sources */,
+				D252BE3920EAE687002320E1 /* game1.cpp in Sources */,
+				D252BE4320EAE72F002320E1 /* card.cpp in Sources */,
+				D252BE4420EAE72F002320E1 /* deck.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
