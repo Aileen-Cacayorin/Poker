@@ -30,10 +30,10 @@
 		D21DE96A20EB38E500040247 /* main.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
 		D252BE3520EAE687002320E1 /* Poker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Poker; sourceTree = BUILT_PRODUCTS_DIR; };
 		D252BE3820EAE687002320E1 /* game1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game1.cpp; sourceTree = "<group>"; };
-		D252BE3F20EAE72F002320E1 /* card.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = card.cpp; path = "../../../1 - Poker Lab Data Files/card.cpp"; sourceTree = "<group>"; };
-		D252BE4020EAE72F002320E1 /* deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = deck.h; path = "../../../1 - Poker Lab Data Files/deck.h"; sourceTree = "<group>"; };
-		D252BE4120EAE72F002320E1 /* deck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = deck.cpp; path = "../../../1 - Poker Lab Data Files/deck.cpp"; sourceTree = "<group>"; };
-		D252BE4220EAE72F002320E1 /* card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = card.h; path = "../../../1 - Poker Lab Data Files/card.h"; sourceTree = "<group>"; };
+		D252BE3F20EAE72F002320E1 /* card.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = card.cpp; sourceTree = "<group>"; };
+		D252BE4020EAE72F002320E1 /* deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deck.h; sourceTree = "<group>"; };
+		D252BE4120EAE72F002320E1 /* deck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = deck.cpp; sourceTree = "<group>"; };
+		D252BE4220EAE72F002320E1 /* card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = card.h; sourceTree = "<group>"; };
 		D252BE4520EAE744002320E1 /* game1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = game1.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

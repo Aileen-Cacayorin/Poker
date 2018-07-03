@@ -29,6 +29,6 @@ int main(int argc, const char * argv[]) {
         cout << poker.hasFlush() << endl;
         cout << poker.hasPair() << endl;
     }
-    
+    cout << "This change will be committed";
     return 0;
 };
