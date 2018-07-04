@@ -11,6 +11,8 @@
 		D252BE3920EAE687002320E1 /* game1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D252BE3820EAE687002320E1 /* game1.cpp */; };
 		D252BE4320EAE72F002320E1 /* card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D252BE3F20EAE72F002320E1 /* card.cpp */; };
 		D252BE4420EAE72F002320E1 /* deck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D252BE4120EAE72F002320E1 /* deck.cpp */; };
+		D2A24F6A20EC927E0000F6E1 /* game2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D2A24F6820EC927E0000F6E1 /* game2.cpp */; };
+		D2A24F6D20EC928E0000F6E1 /* hand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D2A24F6B20EC928E0000F6E1 /* hand.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +37,10 @@
 		D252BE4120EAE72F002320E1 /* deck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = deck.cpp; sourceTree = "<group>"; };
 		D252BE4220EAE72F002320E1 /* card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = card.h; sourceTree = "<group>"; };
 		D252BE4520EAE744002320E1 /* game1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = game1.h; sourceTree = "<group>"; };
+		D2A24F6820EC927E0000F6E1 /* game2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game2.cpp; sourceTree = "<group>"; };
+		D2A24F6920EC927E0000F6E1 /* game2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game2.hpp; sourceTree = "<group>"; };
+		D2A24F6B20EC928E0000F6E1 /* hand.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hand.cpp; sourceTree = "<group>"; };
+		D2A24F6C20EC928E0000F6E1 /* hand.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hand.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,10 @@
 			isa = PBXGroup;
 			children = (
 				D252BE3820EAE687002320E1 /* game1.cpp */,
+				D2A24F6B20EC928E0000F6E1 /* hand.cpp */,
+				D2A24F6C20EC928E0000F6E1 /* hand.hpp */,
+				D2A24F6820EC927E0000F6E1 /* game2.cpp */,
+				D2A24F6920EC927E0000F6E1 /* game2.hpp */,
 				D21DE96920EB38E500040247 /* main.cpp */,
 				D21DE96A20EB38E500040247 /* main.hpp */,
 				D252BE4520EAE744002320E1 /* game1.h */,
@@ -136,7 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A24F6D20EC928E0000F6E1 /* hand.cpp in Sources */,
 				D252BE3920EAE687002320E1 /* game1.cpp in Sources */,
+				D2A24F6A20EC927E0000F6E1 /* game2.cpp in Sources */,
 				D252BE4320EAE72F002320E1 /* card.cpp in Sources */,
 				D21DE96B20EB38E500040247 /* main.cpp in Sources */,
 				D252BE4420EAE72F002320E1 /* deck.cpp in Sources */,
