@@ -12,6 +12,8 @@
 
 using namespace std;
 
+extern ofstream csis;
+
 const char * Card::snames[4] = {" Diamonds", "Hearts", "Clubs", "Spades" };
 const char * Card::vnames[14] = {" Bad Card", "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
 

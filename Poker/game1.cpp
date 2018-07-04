@@ -11,8 +11,11 @@
 #include <time.h>
 #include <iostream>
 #include "game1.h"
+#include <fstream>
 
 using namespace std;
+
+extern ofstream csis;
 
 Game::Game() {
     gameDeck = Deck();
@@ -37,6 +40,32 @@ void Game::dealCards() {
     }
 };
 
+void Game::playHand() {
+    dealCards();
+    if (hasFlush())
+        totalFlushes +=1;
+    if (hasPair())
+        totalPairs += 1;
+    putCardsBack();
+};
+
+void Game::putCardsBack() {
+    for (int i = 0; i < 5; i++) {
+        gameDeck.addCard(hand[i]);
+    };
+};
+
+void Game::printGameResults(int n) {
+    csis << n+1 <<"\t"<< totalHands << "\t\t" << getTotalPairs() <<"\t\t" << getTotalFlushes() << "\t" << calculatePairPercentage() << "%\t" << calculateFlushPercentage() << "%" << endl;
+    
+    cout << n+1 <<"\t"<< totalHands << "\t\t" << getTotalPairs() <<"\t\t" << getTotalFlushes() <<"\t" << calculatePairPercentage() << "%\t" << calculateFlushPercentage() << "%" << endl;
+};
+
+int Game::getTotalFlushes() {
+    return totalFlushes;
+    
+};
+
 bool Game::hasFlush() {
     for (int i = 1; i < 5; i++) {
         if (hand[i].getSuit() != hand[0].getSuit())
@@ -56,35 +85,16 @@ bool Game::hasPair() {
     return 0;
 };
 
-void Game::putCardsBack() {
-    for (int i = 0; i < 5; i++) {
-        gameDeck.addCard(hand[i]);
-    };
-};
-
-void Game::playHand() {
-    dealCards();
-    if (hasFlush())
-        totalFlushes +=1;
-    if (hasPair())
-        totalPairs += 1;
-    putCardsBack();
-};
-
-int Game::getTotalFlushes() {
-    return totalFlushes;
-    
-};
-int Game::getTotalPairs() {
-    return totalPairs;
-};
-
 double Game::calculateFlushPercentage() {
     return (static_cast <double>(totalFlushes)/ totalHands)*100;
 };
 
 double Game::calculatePairPercentage() {
     return (static_cast <double>(totalPairs)/ totalHands)*100;
+};
+
+int Game::getTotalPairs() {
+    return totalPairs;
 };
 
 

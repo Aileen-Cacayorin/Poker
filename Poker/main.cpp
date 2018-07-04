@@ -13,17 +13,26 @@
 #include <time.h>
 #include <iostream>
 #include <iomanip>
+#include <fstream>
 
 
 using namespace std;
 
-void printHeader() {
+ofstream csis;
+
+void printTableHeader() {
+    csis << "Trial  ";
     cout << "Trial  ";
+    csis << "# of Hands ";
     cout << "# of Hands ";
-    cout << "# of Flushes   ";
-    cout << "# of Pairs     ";
-    cout << "Flush %     ";
-    cout << "Pair % " <<endl;
+    csis << "# of Pairs ";
+    cout << "# of Pairs ";
+    csis << "# of Flushes ";
+    cout << "# of Flushes ";
+    csis << "Pair %     ";
+    cout << "Pair %     ";
+    csis << "Flush %" << endl;
+    cout << "Flush %" << endl;
 };
 
 void runTrial(int n) {
@@ -32,7 +41,7 @@ void runTrial(int n) {
         for (int i=0; i<poker.totalHands; i++) {
             poker.playHand();
         }
-        cout << "\t" << i+1 <<"\t\t"<< poker.totalHands << "\t\t" << poker.getTotalFlushes() << "\t\t\t" << poker.getTotalPairs() <<"\t\t" <<  poker.calculateFlushPercentage() << "%\t\t" <<  poker.calculatePairPercentage() << "%" << endl;
+     poker.printGameResults(i);
     }
 }
 
@@ -41,10 +50,13 @@ int main(int argc, const char * argv[]) {
     
     srand((unsigned)time(NULL));
     
-    int trials = 10;
+    int numberOfTrials = 10;
+    
+    csis.open("csis1.txt");
     cout << fixed << setprecision(2);
-    printHeader();
-    runTrial(trials);
+    printTableHeader();
+    runTrial(numberOfTrials);
+    csis.close();
     
     return 0;
 };

@@ -28,6 +28,7 @@ class Game {
         bool hasPair();             // checks if a hand has a pair
         void putCardsBack();        // returns all cards in a hand to deck
         void playHand();            // shuffles deck, deals a hand, puts cards back in deck
+        void printGameResults(int n);    // print game results
         int getTotalFlushes();      // returns total number of flushes in a game
         int getTotalPairs();        // returns total number of pairs in a game
         double calculateFlushPercentage(); //returns percentage of flushes in a game

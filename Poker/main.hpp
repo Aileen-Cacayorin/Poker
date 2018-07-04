@@ -12,4 +12,7 @@
 #include <stdio.h>
 #include "game1.h"
 
+void printTableHeader();      // prints header for output table
+void runTrial(int n);         // runs n trials 
+
 #endif /* main_hpp */

@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include "deck.h"
 
+
 Deck::Deck() {
     int i;
     Card::Suit curSuit;
