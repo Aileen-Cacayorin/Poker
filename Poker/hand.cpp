@@ -14,18 +14,24 @@
 
 using namespace std;
 
-
+using namespace nshand;
 
 Hand::Hand() {
     Card cards[5];
 }
 
-
-void Hand::dealCards(Deck gameDeck) {
+void Hand::dealCards(Deck *deck) {
     for (int i = 0; i < 5; i++) {
-        cards[i] = gameDeck.getCard();
-    }
-}
+        cards[i] = deck->getCard();
+    };
+};
+
+void Hand::putCardsBack(Deck *deck) {
+    for (int i = 0; i < 5; i++) {
+        deck->addCard(cards[i]);
+    };
+};
+
 bool Hand::hasFlush() {
     for (int i = 1; i < 5; i++) {
         if (cards[i].getSuit() != cards[0].getSuit())

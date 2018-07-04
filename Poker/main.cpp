@@ -8,6 +8,8 @@
 
 #include "main.hpp"
 #include "game1.h"
+#include "game2.hpp"
+#include "hand.hpp"
 
 #include <stdlib.h>
 #include <time.h>
@@ -50,13 +52,25 @@ int main(int argc, const char * argv[]) {
     
     srand((unsigned)time(NULL));
     
-    int numberOfTrials = 10;
+//    int numberOfTrials = 10;
+//
+//    csis.open("csis1.txt");
+//    cout << fixed << setprecision(2);
+//    printTableHeader();
+//    runTrial(numberOfTrials);
+//    csis.close();
     
-    csis.open("csis1.txt");
-    cout << fixed << setprecision(2);
+    //using game2 and hand class
+    
+    using namespace nsgame2;
     printTableHeader();
-    runTrial(numberOfTrials);
-    csis.close();
-    
+    int n=1;
+    for (int i=0; i <n; i++) {
+        Game2 poker2(10000);
+        for (int i =0; i < poker2.totalHands; i++ ) {
+          poker2.playHand();
+        }
+        poker2.printGameResults(i);
+    };
     return 0;
 };

@@ -61,11 +61,6 @@ void Game::printGameResults(int n) {
     cout << n+1 <<"\t"<< totalHands << "\t\t" << getTotalPairs() <<"\t\t" << getTotalFlushes() <<"\t" << calculatePairPercentage() << "%\t" << calculateFlushPercentage() << "%" << endl;
 };
 
-int Game::getTotalFlushes() {
-    return totalFlushes;
-    
-};
-
 bool Game::hasFlush() {
     for (int i = 1; i < 5; i++) {
         if (hand[i].getSuit() != hand[0].getSuit())
@@ -91,6 +86,10 @@ double Game::calculateFlushPercentage() {
 
 double Game::calculatePairPercentage() {
     return (static_cast <double>(totalPairs)/ totalHands)*100;
+};
+
+int Game::getTotalFlushes() {
+    return totalFlushes;
 };
 
 int Game::getTotalPairs() {

@@ -21,7 +21,8 @@ namespace nshand {
             Card cards[5];
         public:
             Hand();
-            void dealCards(Deck);
+            void dealCards(Deck *deck);
+            void putCardsBack(Deck *deck);
             bool hasFlush();            // checks if a hand has a flush
             bool hasPair();             // checks if a hand has a pair
     };
