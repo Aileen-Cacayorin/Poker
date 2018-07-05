@@ -22,7 +22,12 @@ using namespace std;
 
 ofstream csis;
 
-void printTableHeader() {                   //prints header for results table
+void printMyInfo() {                             //print my student ID details
+    csis << "Name: Aileen Cacayorin" << endl;
+    csis << "Palomar ID: 011519388" << endl;
+}
+
+void printTableHeader() {                       //prints header for results table
     csis << "Trial";
     cout << "Trial";
     csis << setw(15) << "# of Hands";
@@ -37,27 +42,55 @@ void printTableHeader() {                   //prints header for results table
     cout << setw(15) << "Flush %" << endl;
 };
 
-void runTrial(int n) {                  // runs n trials for class Game
+double getAverage(double sum) {             // get averages for all 10 trials
+    return sum/10;
+};
+
+void runTrial(int n) {                      // runs n trials for class Game
+    printMyInfo();
     printTableHeader();
+    double pairPercentageSum = 0.0;
+    double flushPercentageSum = 0.0;
+    
     for (int i=0; i < n; i++) {
         Game poker(10000);
         for (int i=0; i<poker.totalHands; i++) {
             poker.playHand();
         }
-     poker.printGameResults(i);
+        pairPercentageSum += poker.calculatePairPercentage();
+        flushPercentageSum += poker.calculateFlushPercentage();
+        poker.printGameResults(i);
     }
+    csis << fixed << setprecision(2);
+    cout << fixed << setprecision(2);
+    csis << "Overall pair %: " << getAverage(pairPercentageSum) << endl;
+    cout << "Overall pair %: " << getAverage(pairPercentageSum) << endl;
+    csis << "Overal flush %: " << getAverage(flushPercentageSum) << endl;
+    cout << "Overal flush %: " << getAverage(flushPercentageSum) << endl;
 }
 
 void runGame2Trial(int n) {         // runs n trials for class Game2 (using class Hand)
     using namespace nsgame2;        // specify class Game2 namespace
+    printMyInfo();
     printTableHeader();
+    double pairPercentageSum = 0.0;
+    double flushPercentageSum = 0.0;
+    
     for (int i=0; i <n; i++) {
         Game2 poker2(10000);
         for (int i =0; i < poker2.totalHands; i++ ) {
             poker2.playHand();
         }
+        pairPercentageSum += poker2.calculatePairPercentage();
+        flushPercentageSum += poker2.calculateFlushPercentage();
         poker2.printGameResults(i);
     }
+    csis << fixed << setprecision(2);
+    cout << fixed << setprecision(2);
+    csis << "Overall pair %: " << getAverage(pairPercentageSum) << endl;
+    cout << "Overall pair %: " << getAverage(pairPercentageSum) << endl;
+    csis << "Overal flush %: " << getAverage(flushPercentageSum) << endl;
+    cout << "Overal flush %: " << getAverage(flushPercentageSum) << endl;
 };
 
 int main(int argc, const char * argv[]) {
