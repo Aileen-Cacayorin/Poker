@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		D21DE96920EB38E500040247 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		D21DE96A20EB38E500040247 /* main.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
+		D21DE96A20EB38E500040247 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		D252BE3520EAE687002320E1 /* Poker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Poker; sourceTree = BUILT_PRODUCTS_DIR; };
 		D252BE3820EAE687002320E1 /* game1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game1.cpp; sourceTree = "<group>"; };
 		D252BE3F20EAE72F002320E1 /* card.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = card.cpp; sourceTree = "<group>"; };
@@ -38,9 +38,9 @@
 		D252BE4220EAE72F002320E1 /* card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = card.h; sourceTree = "<group>"; };
 		D252BE4520EAE744002320E1 /* game1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = game1.h; sourceTree = "<group>"; };
 		D2A24F6820EC927E0000F6E1 /* game2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game2.cpp; sourceTree = "<group>"; };
-		D2A24F6920EC927E0000F6E1 /* game2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game2.hpp; sourceTree = "<group>"; };
+		D2A24F6920EC927E0000F6E1 /* game2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = game2.h; sourceTree = "<group>"; };
 		D2A24F6B20EC928E0000F6E1 /* hand.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hand.cpp; sourceTree = "<group>"; };
-		D2A24F6C20EC928E0000F6E1 /* hand.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hand.hpp; sourceTree = "<group>"; };
+		D2A24F6C20EC928E0000F6E1 /* hand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hand.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +75,11 @@
 			children = (
 				D252BE3820EAE687002320E1 /* game1.cpp */,
 				D2A24F6B20EC928E0000F6E1 /* hand.cpp */,
-				D2A24F6C20EC928E0000F6E1 /* hand.hpp */,
+				D2A24F6C20EC928E0000F6E1 /* hand.h */,
 				D2A24F6820EC927E0000F6E1 /* game2.cpp */,
-				D2A24F6920EC927E0000F6E1 /* game2.hpp */,
+				D2A24F6920EC927E0000F6E1 /* game2.h */,
 				D21DE96920EB38E500040247 /* main.cpp */,
-				D21DE96A20EB38E500040247 /* main.hpp */,
+				D21DE96A20EB38E500040247 /* main.h */,
 				D252BE4520EAE744002320E1 /* game1.h */,
 				D252BE3F20EAE72F002320E1 /* card.cpp */,
 				D252BE4220EAE72F002320E1 /* card.h */,

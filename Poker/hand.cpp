@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "hand.hpp"
+#include "hand.h"
 
 using namespace std;
 using namespace nshand;

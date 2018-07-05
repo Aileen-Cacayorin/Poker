@@ -12,7 +12,7 @@
 #include <fstream>
 #include <iomanip>
 
-#include "game2.hpp"
+#include "game2.h"
 
 using namespace nsgame2;
 using namespace nshand;

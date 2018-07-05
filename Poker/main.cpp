@@ -6,10 +6,10 @@
 //  Copyright © 2018 com.aileenbull. All rights reserved.
 //
 
-#include "main.hpp"
-//#include "game1.h"
-#include "game2.hpp"
-#include "hand.hpp"
+#include "main.h"
+#include "game1.h"
+#include "game2.h"
+#include "hand.h"
 
 #include <stdlib.h>
 #include <time.h>
@@ -22,8 +22,7 @@ using namespace std;
 
 ofstream csis;
 
-void printTableHeader() {
-
+void printTableHeader() {                   //prints header for results table
     csis << "Trial";
     cout << "Trial";
     csis << setw(15) << "# of Hands";
@@ -38,7 +37,7 @@ void printTableHeader() {
     cout << setw(15) << "Flush %" << endl;
 };
 
-void runTrial(int n) {
+void runTrial(int n) {                  // runs n trials for class Game
     printTableHeader();
     for (int i=0; i < n; i++) {
         Game poker(10000);
@@ -49,8 +48,8 @@ void runTrial(int n) {
     }
 }
 
-void runGame2Trial(int n) {
-    using namespace nsgame2;
+void runGame2Trial(int n) {         // runs n trials for class Game2 (using class Hand)
+    using namespace nsgame2;        // specify class Game2 namespace
     printTableHeader();
     for (int i=0; i <n; i++) {
         Game2 poker2(10000);
