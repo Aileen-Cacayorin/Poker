@@ -22,9 +22,11 @@ using namespace std;
 
 ofstream csis;
 
-void printMyInfo() {                             //print my student ID details
+void printMyInfo() {                             //print my student ID and compiler details
     csis << "Name: Aileen Cacayorin" << endl;
     csis << "Palomar ID: 011519388" << endl;
+    csis << "Title: Poker Lab" << endl;
+    csis << "Compiler: XCode 9.2" << endl;
 }
 
 void printTableHeader() {                       //prints header for results table
