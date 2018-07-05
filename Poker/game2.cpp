@@ -9,13 +9,16 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
+#include <fstream>
+#include <iomanip>
 
 #include "game2.hpp"
-
 
 using namespace nsgame2;
 using namespace nshand;
 using namespace std;
+
+extern ofstream csis;
 
 Game2::Game2() {
     gameDeck = Deck();
@@ -44,9 +47,10 @@ void Game2::playHand() {
 };
 
 void Game2::printGameResults(int n) {
-//    csis << n+1 <<"\t"<< totalHands << "\t\t" << getTotalPairs() <<"\t\t" << getTotalFlushes() << "\t" << calculatePairPercentage() << "%\t" << calculateFlushPercentage() << "%" << endl;
+    csis << fixed << setprecision(2);
+    csis << n+1 << setw(15) << totalHands << setw(15) << getTotalPairs() << setw(15) << getTotalFlushes() << setw(15) << calculatePairPercentage() << setw(15)<< calculateFlushPercentage() << endl;
     
-    cout << n+1 <<"\t"<< totalHands << "\t\t" << getTotalPairs() <<"\t\t" << getTotalFlushes() <<"\t" << calculatePairPercentage() << "%\t" << calculateFlushPercentage() << "%" << endl;
+    cout << n+1 <<setw(15) << totalHands << setw(15) << getTotalPairs() <<setw(15) << getTotalFlushes() << setw(15) << calculatePairPercentage() <<setw(15) << calculateFlushPercentage() << endl;
 };
 
 int Game2::getTotalFlushes() {

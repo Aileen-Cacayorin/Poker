@@ -7,7 +7,7 @@
 //
 
 #include "main.hpp"
-#include "game1.h"
+//#include "game1.h"
 #include "game2.hpp"
 #include "hand.hpp"
 
@@ -23,21 +23,23 @@ using namespace std;
 ofstream csis;
 
 void printTableHeader() {
-    csis << "Trial  ";
-    cout << "Trial  ";
-    csis << "# of Hands ";
-    cout << "# of Hands ";
-    csis << "# of Pairs ";
-    cout << "# of Pairs ";
-    csis << "# of Flushes ";
-    cout << "# of Flushes ";
-    csis << "Pair %     ";
-    cout << "Pair %     ";
-    csis << "Flush %" << endl;
-    cout << "Flush %" << endl;
+
+    csis << "Trial";
+    cout << "Trial";
+    csis << setw(15) << "# of Hands";
+    cout << setw(15) << "# of Hands";
+    csis << setw(15) << "# of Pairs";
+    cout << setw(15) << "# of Pairs";
+    csis << setw(15) << "# of Flushes";
+    cout << setw(15) << "# of Flushes";
+    csis << setw(12) << "Pair %";
+    cout << setw(12) << "Pair %";
+    csis << setw(15) << "Flush %" << endl;
+    cout << setw(15) << "Flush %" << endl;
 };
 
 void runTrial(int n) {
+    printTableHeader();
     for (int i=0; i < n; i++) {
         Game poker(10000);
         for (int i=0; i<poker.totalHands; i++) {
@@ -47,30 +49,32 @@ void runTrial(int n) {
     }
 }
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    
-    srand((unsigned)time(NULL));
-    
-//    int numberOfTrials = 10;
-//
-//    csis.open("csis1.txt");
-//    cout << fixed << setprecision(2);
-//    printTableHeader();
-//    runTrial(numberOfTrials);
-//    csis.close();
-    
-    //using game2 and hand class
-    
+void runGame2Trial(int n) {
     using namespace nsgame2;
     printTableHeader();
-    int n=1;
     for (int i=0; i <n; i++) {
         Game2 poker2(10000);
         for (int i =0; i < poker2.totalHands; i++ ) {
-          poker2.playHand();
+            poker2.playHand();
         }
         poker2.printGameResults(i);
-    };
+    }
+};
+
+int main(int argc, const char * argv[]) {
+    srand((unsigned)time(NULL));
+    
+    int numberOfTrials = 10;
+
+    csis.open("csis1.txt");
+    cout << fixed << setprecision(2);
+    runTrial(numberOfTrials);
+    csis.close();
+    
+    csis.open("csis2.txt");
+    cout << fixed << setprecision(2);
+    runGame2Trial(numberOfTrials);
+    csis.close();
+    
     return 0;
 };

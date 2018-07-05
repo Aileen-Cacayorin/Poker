@@ -34,8 +34,6 @@ class Game {
         double calculateFlushPercentage(); //returns percentage of flushes in a game
         double calculatePairPercentage();       // returns percentage of pairs in a game
     
-    
-    
 };
 
 

@@ -9,11 +9,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include <fstream>
 #include "hand.hpp"
 
 using namespace std;
-
 using namespace nshand;
 
 Hand::Hand() {

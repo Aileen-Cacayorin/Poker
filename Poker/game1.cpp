@@ -10,8 +10,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "game1.h"
+#include <iomanip>
 #include <fstream>
+
+#include "game1.h"
 
 using namespace std;
 
@@ -56,9 +58,10 @@ void Game::putCardsBack() {
 };
 
 void Game::printGameResults(int n) {
-    csis << n+1 <<"\t"<< totalHands << "\t\t" << getTotalPairs() <<"\t\t" << getTotalFlushes() << "\t" << calculatePairPercentage() << "%\t" << calculateFlushPercentage() << "%" << endl;
+    csis << fixed << setprecision(2);
+    csis << n+1 << setw(15) << totalHands << setw(15) << getTotalPairs() << setw(15) << getTotalFlushes() << setw(15) << calculatePairPercentage() << setw(15)<< calculateFlushPercentage() << endl;
     
-    cout << n+1 <<"\t"<< totalHands << "\t\t" << getTotalPairs() <<"\t\t" << getTotalFlushes() <<"\t" << calculatePairPercentage() << "%\t" << calculateFlushPercentage() << "%" << endl;
+    cout << n+1 <<setw(15) << totalHands << setw(15) << getTotalPairs() <<setw(15) << getTotalFlushes() << setw(15) << calculatePairPercentage() <<setw(15) << calculateFlushPercentage() << endl;
 };
 
 bool Game::hasFlush() {
