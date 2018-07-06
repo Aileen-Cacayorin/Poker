@@ -44,6 +44,7 @@ void Game2::playHand() {
     if (gameHand.hasPair())
         totalPairs += 1;
     gameHand.putCardsBack(dptr);
+    gameDeck.shuffle(100);
 };
 
 void Game2::printGameResults(int n) {

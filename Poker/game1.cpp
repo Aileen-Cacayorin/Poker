@@ -49,6 +49,7 @@ void Game::playHand() {
     if (hasPair())
         totalPairs += 1;
     putCardsBack();
+    gameDeck.shuffle(100);
 };
 
 void Game::putCardsBack() {
